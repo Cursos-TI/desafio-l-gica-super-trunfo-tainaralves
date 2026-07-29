@@ -8,7 +8,7 @@
 int main()
 {
   // Área para definição das variáveis para armazenar as propriedades das cidades
-  int comparacao1, comparacao2, resultado1, resultado2;
+  int comparacao1, comparacao2, pontosCarta1, pontosCarta2;
   char estado;
   char codigoCarta[20], nomeCidade[50];
   int pontosTuristicos;
@@ -119,35 +119,35 @@ int main()
     printf("Atributo selecionado: População \n");
     printf("Carta 1: %lu \n", populacao);
     printf("Carta 2: %lu \n", populacao2);
-    resultado1 = populacao > populacao2 ? 1 : 0;
+    pontosCarta1 = populacao > populacao2 ? 1 : 0;
     break;
 
   case 2:
     printf("Atributo selecionado: Área \n");
     printf("Carta 1: %.2f km² \n", area);
     printf("Carta 2: %.2f km² \n", area2);
-    resultado1 = area > area2 ? 1 : 0;
+    pontosCarta1 = area > area2 ? 1 : 0;
     break;
 
   case 3:
     printf("Atributo selecionado: PIB \n");
     printf("Carta 1:  %.2f bilhões de reais \n", pib);
     printf("Carta 2:  %.2f bilhões de reais \n", pib2);
-    resultado1 = pib > pib2 ? 1 : 0;
+    pontosCarta1 = pib > pib2 ? 1 : 0;
     break;
 
   case 4:
     printf("Atributo selecionado: Número de pontos turísticos \n");
     printf("Carta 1:  %d \n", pontosTuristicos);
     printf("Carta 2:  %d \n", pontosTuristicos2);
-    resultado1 = pontosTuristicos > pontosTuristicos2 ? 1 : 0;
+    pontosCarta1 = pontosTuristicos > pontosTuristicos2 ? 1 : 0;
     break;
 
   case 5:
     printf("Atributo selecionado: Densidade Populacional \n");
     printf("Carta 1:  %.2f hab/km² \n", densidadePopulacional);
     printf("Carta 2:  %.2f hab/km² \n", densidadePopulacional2);
-    resultado1 = densidadePopulacional < densidadePopulacional2 ? 1 : 0;
+    pontosCarta1 = densidadePopulacional < densidadePopulacional2 ? 1 : 0;
     break;
   default:
     printf("Opção escolhida inválida!");
@@ -175,35 +175,35 @@ int main()
       printf("Atributo selecionado: População \n");
       printf("Carta 1: %lu \n", populacao);
       printf("Carta 2: %lu \n", populacao2);
-      resultado2 = populacao < populacao2 ? 1 : 0;
+      pontosCarta2 = populacao < populacao2 ? 1 : 0;
       break;
 
     case 2:
       printf("Atributo selecionado: Área \n");
       printf("Carta 1: %.2f km² \n", area);
       printf("Carta 2: %.2f km² \n", area2);
-      resultado2 = area < area2 ? 1 : 0;
+      pontosCarta2 = area < area2 ? 1 : 0;
       break;
 
     case 3:
       printf("Atributo selecionado: PIB \n");
       printf("Carta 1:  %.2f bilhões de reais \n", pib);
       printf("Carta 2:  %.2f bilhões de reais \n", pib2);
-      resultado2 = pib < pib2 ? 1 : 0;
+      pontosCarta2 = pib < pib2 ? 1 : 0;
       break;
 
     case 4:
       printf("Atributo selecionado: Número de pontos turísticos \n");
       printf("Carta 1:  %d \n", pontosTuristicos);
       printf("Carta 2:  %d \n", pontosTuristicos2);
-      resultado2 = pontosTuristicos < pontosTuristicos2 ? 1 : 0;
+      pontosCarta2 = pontosTuristicos < pontosTuristicos2 ? 1 : 0;
       break;
 
     case 5:
       printf("Atributo selecionado: Densidade Populacional \n");
       printf("Carta 1:  %.2f hab/km² \n", densidadePopulacional);
       printf("Carta 2:  %.2f hab/km² \n", densidadePopulacional2);
-      resultado2 = densidadePopulacional > densidadePopulacional2 ? 1 : 0;
+      pontosCarta2 = densidadePopulacional > densidadePopulacional2 ? 1 : 0;
       break;
     default:
       printf("Opção escolhida inválida!");
@@ -211,10 +211,10 @@ int main()
     }
   }
 
-  if ((resultado1 == 1 && resultado2 == 1) || (resultado1 == 0 && resultado2 == 0)){
+  if ((pontosCarta1 == 1 && pontosCarta2 == 1) || (pontosCarta1 == 0 && pontosCarta2 == 0)){
     printf("O jogo empatou!");
   }
-  else if (resultado1 == 1 && resultado2 == 0){
+  else if (pontosCarta1 == 1 && pontosCarta2 == 0){
     printf("A carta 1 venceu");
   }
   else{
